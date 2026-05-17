@@ -34,6 +34,8 @@ npm install
 
 # 4. Construye el proyecto y enlaza la CLI a tu sistema
 npm run build
+
+# Nota: En Linux o macOS, si falla por permisos (EACCES), usa `sudo npm link`
 npm link
 ```
 

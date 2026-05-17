@@ -15,9 +15,12 @@
 - 🤖 **`gitmind commit`**: Lee tus cambios preparados (`git add`) y redacta el mensaje de commit perfecto usando Conventional Commits.
 - 🔬 **`gitmind explain`**: ¿No sabes qué hace un archivo? GitMind lee el código y te lo explica paso a paso, como tu ingeniero senior favorito.
 - 📝 **`gitmind changelog`**: Obtén un hermoso "Changelog" (Notas de versión) en formato Markdown revisando mágicamente tus últimos 15 commits.
-- 🐙 **`gitmind pr <numero>`**: Usa la **API Oficial de GitHub** para obtener el diferencial de un Pull Request completo, generando un resumen automático e identificando bugs escondidos.
+- 🐙 **`gitmind pr <numero>`**: Analiza Pull Requests usando la **API Oficial de GitHub REST** (`api.github.com`) para obtener el diff, y evalúa el código señalando posibles bugs.
 
 ---
+
+### 🐙 Integrado con el ecosistema de GitHub
+Diseñado para la comunidad. GitMind utiliza internamente la **GitHub REST API** para interactuar con tus Pull Requests y es plenamente compatible con el ecosistema de **GitHub Models** usando tus Tokens de Acceso Personal para aprovechar la IA abierta y de primer nivel.
 
 ## ⚡ Instalación y Configuración
 
@@ -87,7 +90,7 @@ gitmind changelog
 ---
 
 ## 🛠 Features FUTURAS (Roadmap)
-- **v2**: Resúmenes de Pull Requests (PRs), Auto Code-Review e integración con GitHub Actions.
+- **v2**: Auto Code-Review e integración plena con GitHub Actions en CI/CD pipeline.
 - **v3**: Soporte para modelos IA locales (Llama) y extensiones de VSCode.
 
 ## 🤝 Open Source y Contribución

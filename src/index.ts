@@ -4,6 +4,7 @@ import { Command } from "commander";
 import { commitCommand } from "./commands/commit";
 import { explainCommand } from "./commands/explain";
 import { changelogCommand } from "./commands/changelog";
+import { prCommand } from "./commands/pr";
 
 const program = new Command();
 
@@ -24,5 +25,10 @@ program.command("explain")
 program.command("changelog")
     .description("Genera un hermoso Changelog desde los últimos commits")
     .action(changelogCommand);
+
+program.command("pr")
+    .description("Resume y audita un Pull Request usando la API oficial de GitHub")
+    .argument("<numero>", "Número identificador del Pull Request")
+    .action(prCommand);
 
 program.parse();

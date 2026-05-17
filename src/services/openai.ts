@@ -66,6 +66,19 @@ export async function explainCode(code: string) {
     ]);
 }
 
+export async function summarizePR(prDiff: string) {
+    return await callOpenAI([
+        {
+            role: "system",
+            content: "You are an expert GitHub Reviewer. Given a Pull Request diff, output a clean markdown summary of the changes, logic added/removed, and point out any potential bugs or code smells. Be incredibly professional, polite, and write clearly in Spanish."
+        },
+        {
+            role: "user",
+            content: `Genera un review automático y resumen exhaustivo para este código de Pull Request:\n${prDiff.substring(0, 8000)}`,
+        },
+    ]);
+}
+
 export async function generateChangelogDesc(commits: readonly any[]) {
     const commitList = commits.map(c => `- ${c.hash.substring(0, 7)}: ${c.message}`).join("\n");
     return await callOpenAI([

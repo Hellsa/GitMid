@@ -10,11 +10,12 @@
 
 ---
 
-## ✨ Características (MVP)
+## ✨ Características (MVP Extendido)
 
 - 🤖 **`gitmind commit`**: Lee tus cambios preparados (`git add`) y redacta el mensaje de commit perfecto usando Conventional Commits.
 - 🔬 **`gitmind explain`**: ¿No sabes qué hace un archivo? GitMind lee el código y te lo explica paso a paso, como tu ingeniero senior favorito.
 - 📝 **`gitmind changelog`**: Obtén un hermoso "Changelog" (Notas de versión) en formato Markdown revisando mágicamente tus últimos 15 commits.
+- 🐙 **`gitmind pr <numero>`**: Usa la **API Oficial de GitHub** para obtener el diferencial de un Pull Request completo, generando un resumen automático e identificando bugs escondidos.
 
 ---
 

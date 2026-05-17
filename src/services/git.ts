@@ -18,3 +18,14 @@ export async function getFileContent(filePath: string) {
     }
     return null;
 }
+
+export async function getRepoInfo() {
+    const remotes = await git.getRemotes(true);
+    const origin = remotes.find((r: any) => r.name === "origin");
+    if (!origin) throw new Error("No se encontró un origen 'origin' remoto en git.");
+
+    const match = origin.refs.fetch.match(/github\.com[:\/]([^\/]+)\/([^\/\.]+)/);
+    if (!match) throw new Error("No se pudo detectar un repositorio de GitHub válido en tu git remote.");
+
+    return { owner: match[1], repo: match[2] };
+}
